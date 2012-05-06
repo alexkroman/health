@@ -1,0 +1,34 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Notes</th>
+    <th>Breakfast</th>
+    <th>Lunch</th>
+    <th>Dinner</th>
+    <th>Snacks</th>
+    <th>Workouts</th>
+    <th>Created on</th>
+  </tr>
+  
+<% for entry in @entries %>
+  <tr>
+    <td><%=h entry.title %></td>
+    <td><%=h entry.notes %></td>
+    <td><%=h entry.breakfast %></td>
+    <td><%=h entry.lunch %></td>
+    <td><%=h entry.dinner %></td>
+    <td><%=h entry.snacks %></td>
+    <td><%=h entry.workouts %></td>
+    <td><%=h entry.created_on %></td>
+    <td><%= link_to 'Show', entry_path(entry) %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry_path(entry), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entry', new_entry_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @discussion.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @discussion.body %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @discussion.created_at %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @discussion.user_id %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @discussion.group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_discussion_path(@discussion) %> |
+<%= link_to 'Back', discussions_path %>

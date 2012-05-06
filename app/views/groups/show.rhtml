@@ -1,0 +1,32 @@
+<p>
+  <h1><%=h @group.name %></h1>
+  <%= link_to 'Edit', edit_group_path(@group) %>
+</p>
+
+<p>
+  <%=h @group.description %>
+</p>
+
+<div style="width:80%;border:1px solid black;padding:10px;background-color:#eee;margin:10px;font-weight:bold;">
+  Discussions
+</div>
+
+<% @group.discussions.each do |discussion| %>
+   <%= link_to discussion.title, discussion_path(discussion) %>
+   <br />
+   by Alex Kroman - <%=h discussion.created_at %> - 5 comments
+<br /><br />
+
+<% end %>
+
+<div style="width:80%;border:1px solid black;padding:10px;background-color:#eee;margin:10px;font-weight:bold;">
+  Logs
+</div>
+
+<% @group.entries.each do |entry| %>
+   <%= link_to entry.title, entry_path(entry) %>
+   <br />
+   by Alex Kroman - <%=h entry.created_on %> - 5 comments
+<br /><br />
+
+<% end %>

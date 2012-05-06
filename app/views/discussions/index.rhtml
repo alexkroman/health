@@ -1,0 +1,28 @@
+<h1>Listing discussions</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Created at</th>
+    <th>User</th>
+    <th>Group</th>
+  </tr>
+  
+<% for discussion in @discussions %>
+  <tr>
+    <td><%=h discussion.title %></td>
+    <td><%=h discussion.body %></td>
+    <td><%=h discussion.created_at %></td>
+    <td><%=h discussion.user_id %></td>
+    <td><%=h discussion.group_id %></td>
+    <td><%= link_to 'Show', discussion_path(discussion) %></td>
+    <td><%= link_to 'Edit', edit_discussion_path(discussion) %></td>
+    <td><%= link_to 'Destroy', discussion_path(discussion), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New discussion', new_discussion_path %>

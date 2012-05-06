@@ -1,0 +1,43 @@
+<p>
+  <b>Title:</b>
+  <%=h @entry.title %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @entry.notes %>
+</p>
+
+<p>
+  <b>Breakfast:</b>
+  <%=h @entry.breakfast %>
+</p>
+
+<p>
+  <b>Lunch:</b>
+  <%=h @entry.lunch %>
+</p>
+
+<p>
+  <b>Dinner:</b>
+  <%=h @entry.dinner %>
+</p>
+
+<p>
+  <b>Snacks:</b>
+  <%=h @entry.snacks %>
+</p>
+
+<p>
+  <b>Workouts:</b>
+  <%=h @entry.workouts %>
+</p>
+
+<p>
+  <b>Created on:</b>
+  <%=h @entry.created_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
